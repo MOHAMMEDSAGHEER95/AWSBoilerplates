@@ -10,7 +10,7 @@ load_dotenv()
 
 
 # Define the AWS region and the sender's and receiver's email addresses
-AWS_REGION = "eu-west-2"  # Change to your desired region
+AWS_REGION = os.environ.get('AWS_REGION')  # Change to your desired region
 SENDER = os.environ.get('SENDER')  # Change to your verified sender's email address
 RECIPIENT = os.environ.get('RECIPIENT')  # Change to your recipient's email address
 SUBJECT = "Test email from AWS SES"
